@@ -1,0 +1,2 @@
+play.billing.v3.Activity1;play.billing.v3.Activity1
+play.billing.v3.BillingService;play.billing.v3.BillingService

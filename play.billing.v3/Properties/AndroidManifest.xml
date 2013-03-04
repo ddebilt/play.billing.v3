@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="play.billing.v3" android:versionCode="1" android:versionName="1">
+	<uses-sdk android:targetSdkVersion="14" />
+	<application android:icon="@drawable/icon" android:label="play.billing.v3">
+		<service android:name="play.billing.v3.BillingService" />
+	</application>
+	<uses-permission android:name="com.android.vending.BILLING" />
+</manifest>

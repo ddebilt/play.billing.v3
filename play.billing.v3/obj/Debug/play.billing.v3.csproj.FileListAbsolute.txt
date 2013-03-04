@@ -1,0 +1,16 @@
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\play.billing.v3.dll
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\play.billing.v3.pdb
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\play.billing.v3.dll.mdb
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\play.billing.v3.apk
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\play.billing.v3-Signed.apk
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\InAppServiceBinding.dll
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\InAppServiceBinding.pdb
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\play.billing.v3.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\play.billing.v3.dll
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\play.billing.v3.pdb
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\android\bin\play.billing.v3.apk
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\res\layout\main.xml
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\res\values\strings.xml
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\res\drawable\icon.png
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\R.cs.flag
+C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\obj\Debug\uploadflags.txt
