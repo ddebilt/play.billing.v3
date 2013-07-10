@@ -11,7 +11,6 @@ namespace play.billing.v3
 	{
 		public IInAppBillingService InAppService { get; private set; }
 		public Context MainContext { get; private set; }
-		public Handler MainHandler { get; private set; }
 		public Activity MainActivity { get; private set; }
 		public bool PurchasesSupported { get; private set; }
 		public bool SubscriptionsSupported { get; private set; }
@@ -29,7 +28,6 @@ namespace play.billing.v3
 			AttachBaseContext(act);			
 			MainActivity = act;
 			MainContext = act.ApplicationContext;
-			MainHandler = new Handler();
 			CurrentInventory = new Inventory();
 			this.AppKey = appKey;
 			m_listener = listener;
@@ -226,6 +224,7 @@ namespace play.billing.v3
 						return true;
 					}
 					Utils.LogDebug("Purchase signature verification passed. SKU: " + sku);
+					this.CurrentInventory.AddPurchase(item);
 				}
 				catch
 				{
@@ -269,22 +268,24 @@ namespace play.billing.v3
 		/// <param name="disposing"></param>
 		protected override void Dispose(bool disposing)
 		{
-			base.Dispose(disposing);
-
-			Utils.LogDebug("Disposing.");
-
-			if (MainContext != null)
-				MainContext.UnbindService(this);
-
-			if (this.InAppService != null)
+			try
 			{
-				InAppService.Dispose();
-				InAppService = null;
+				base.Dispose(disposing);
+
+				Utils.LogDebug("Disposing.");
+
+				this.UnbindService(this);
+
+				if (this.InAppService != null)
+				{
+					InAppService.Dispose();
+					InAppService = null;
+				}
+
+				if (m_listener != null && this.Connected)
+					m_listener.Disconnected();
 			}
-
-			if (m_listener != null && this.Connected)
-				m_listener.Disconnected();
-
+			catch { }
 			this.Connected = false;
 		}
 	}

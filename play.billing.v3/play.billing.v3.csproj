@@ -44,6 +44,11 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+	<AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>play.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>playPass</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>play</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>playPass</AndroidSigningKeyPass>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />

@@ -23,11 +23,10 @@ namespace play.billing.v3
 			var responseCode = Consts.BILLING_RESPONSE_RESULT_DEVELOPER_ERROR;
 
 			try
-			{
-
-				bool verificationFailed = false;
+			{				
 				string continueToken = null;
 				var purchases = new List<Purchase>();
+				var failures = new List<Purchase>();
 
 				do
 				{
@@ -69,11 +68,11 @@ namespace play.billing.v3
 							var signature = signatureList[i];
 							var sku = purchasedSKUs[i];
 
+							var purchase = new Purchase(this.m_itemType, purchaseData, signature);
+							
 							if (Security.VerifyPurchase(service.AppKey, purchaseData, signature))
 							{
-								Utils.LogDebug("Has Purchased: " + sku);
-								var purchase = new Purchase(this.m_itemType, purchaseData, signature);
-
+								Utils.LogDebug("Has Purchased: " + sku);								
 								purchases.Add(purchase);
 
 								if (TextUtils.IsEmpty(purchase.Token))
@@ -90,7 +89,7 @@ namespace play.billing.v3
 								Utils.LogWarn("Purchased signature verification **FAILED**. Not adding item.");
 								Utils.LogDebug("   Purchase data: " + purchaseData);
 								Utils.LogDebug("   Signature: " + signature);
-								verificationFailed = true;
+								failures.Add(purchase);
 							}
 						}
 						catch (Exception e)
@@ -104,11 +103,7 @@ namespace play.billing.v3
 
 				} while (!TextUtils.IsEmpty(continueToken));
 
-
-				if (verificationFailed)
-					this.TCS.SetResult(new GetPurchasesResponse(Consts.VERIFICATION_FAILED));
-				else
-					this.TCS.SetResult(new GetPurchasesResponse(purchases));
+				this.TCS.SetResult(new GetPurchasesResponse(purchases, failures));
 
 			}
 			catch (Exception e)
@@ -116,7 +111,6 @@ namespace play.billing.v3
 				Utils.LogError("GetPurchases exception. " + e.ToString());
 				this.TCS.SetResult(new GetPurchasesResponse(responseCode, e));
 			}
-
 
 			return this.TCS.Task;
 		}

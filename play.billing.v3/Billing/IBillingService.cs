@@ -29,11 +29,6 @@ namespace play.billing.v3
 		IInAppBillingService InAppService { get; }
 
 		/// <summary>
-		/// The UI thread's handler, useful for posting messages back to the UI thread.
-		/// </summary>
-		Handler MainHandler { get; }
-
-		/// <summary>
 		/// Indicates whether or not the InAppService is connected.
 		/// </summary>
 		bool Connected { get; }

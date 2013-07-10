@@ -128,7 +128,7 @@ namespace play.billing.v3
 							{
 								var sb = new StringBuilder();
 								sb.Append("Purchases: ");
-								t.Result.Items.Select(x => x.Sku).ToList().ForEach(x => sb.AppendFormat("{0},", x));
+								t.Result.PurchasedItems.Select(x => x.Sku).ToList().ForEach(x => sb.AppendFormat("{0},", x));
 								sb.Remove(sb.Length - 1, 1);
 								Toast.MakeText(this, sb.ToString(), ToastLength.Long).Show();
 							}
@@ -137,6 +137,16 @@ namespace play.billing.v3
 						});
 					});
 			};
+		}
+
+
+		protected override void OnDestroy()
+		{
+			Android.Util.Log.Debug("Activity1", "OnDestroy.");
+			if (m_service != null)
+				m_service.Dispose();
+
+			base.OnDestroy();
 		}
 
 

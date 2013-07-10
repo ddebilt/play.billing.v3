@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: Android.Runtime.ResourceDesignerAttribute("play.billing.v3.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("play.billing.v3.Resource", IsApplication=true)]
 
 namespace play.billing.v3
 {
@@ -19,9 +19,9 @@ namespace play.billing.v3
 	public partial class Resource
 	{
 		
-		Resource()
+		static Resource()
 		{
-			global::Android.Runtime.ResourceIdManager.UpdateIdValues ();
+			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
 		public static void UpdateIdValues()
@@ -30,6 +30,11 @@ namespace play.billing.v3
 		
 		public partial class Attribute
 		{
+			
+			static Attribute()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Attribute()
 			{
@@ -41,6 +46,11 @@ namespace play.billing.v3
 			
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Drawable()
 			{
@@ -68,6 +78,11 @@ namespace play.billing.v3
 			// aapt resource value: 0x7f050004
 			public const int UnavailableButton = 2131034116;
 			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
 			private Id()
 			{
 			}
@@ -78,6 +93,11 @@ namespace play.billing.v3
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private Layout()
 			{
@@ -107,6 +127,11 @@ namespace play.billing.v3
 			
 			// aapt resource value: 0x7f040002
 			public const int Unavailable = 2130968578;
+			
+			static String()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
 			
 			private String()
 			{

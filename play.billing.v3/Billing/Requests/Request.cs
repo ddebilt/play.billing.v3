@@ -69,12 +69,14 @@ namespace play.billing.v3
 
 	public class GetPurchasesResponse : Response
 	{
-		public List<Purchase> Items;
+		public List<Purchase> PurchasedItems;
+		public List<Purchase> FailedItems;
 
-		public GetPurchasesResponse(List<Purchase> items)
+		public GetPurchasesResponse(List<Purchase> purchasedItems, List<Purchase> failedItems)
 			: base(Consts.BILLING_RESPONSE_RESULT_OK)
 		{
-			this.Items = items;
+			this.PurchasedItems = purchasedItems;
+			this.FailedItems = failedItems;
 		}
 
 		public GetPurchasesResponse(int responseCode, Exception ex = null)
