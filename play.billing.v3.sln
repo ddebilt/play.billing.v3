@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "play.billing.v3", "play.billing.v3\play.billing.v3.csproj", "{B5E6BE89-F7F9-47DC-ACFB-E21F0CF1D74B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayBillingSample", "PlayBillingSample\PlayBillingSample.csproj", "{B5E6BE89-F7F9-47DC-ACFB-E21F0CF1D74B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InAppServiceBinding", "InAppServiceBinding\InAppServiceBinding.csproj", "{588523AC-E491-4C9B-8413-81C42F40D8B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "play.billing.v3", "play.billing.v3\play.billing.v3.csproj", "{573869D7-EF04-48AB-ABED-FE8378DC1A12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{588523AC-E491-4C9B-8413-81C42F40D8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{588523AC-E491-4C9B-8413-81C42F40D8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{588523AC-E491-4C9B-8413-81C42F40D8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573869D7-EF04-48AB-ABED-FE8378DC1A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573869D7-EF04-48AB-ABED-FE8378DC1A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573869D7-EF04-48AB-ABED-FE8378DC1A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573869D7-EF04-48AB-ABED-FE8378DC1A12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

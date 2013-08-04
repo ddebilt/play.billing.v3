@@ -5,15 +5,23 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{573869D7-EF04-48AB-ABED-FE8378DC1A12}</ProjectGuid>
+    <ProjectGuid>{B5E6BE89-F7F9-47DC-ACFB-E21F0CF1D74B}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>play.billing.v3</RootNamespace>
-    <AssemblyName>play.billing.v3</AssemblyName>
+    <RootNamespace>PlayBillingSample</RootNamespace>
+    <AssemblyName>PlayBillingSample</AssemblyName>
     <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi%3barmeabi-v7a%3bx86</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+    <TargetFrameworkVersion>v2.2</TargetFrameworkVersion>
+    <JavaMaximumHeapSize />
+    <JavaOptions />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,6 +31,11 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidLinkSkip />
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,43 +44,57 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>play.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>playPass</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>play</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>playPass</AndroidSigningKeyPass>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Json" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillingService.cs" />
-    <Compile Include="IBillingService.cs" />
-    <Compile Include="IPlayListener.cs" />
-    <Compile Include="Objects\Inventory.cs" />
-    <Compile Include="Objects\Purchase.cs" />
-    <Compile Include="Objects\SkuDetail.cs" />
-    <Compile Include="Requests\Buy.cs" />
-    <Compile Include="Requests\ConsumePurchase.cs" />
-    <Compile Include="Requests\GetPurchases.cs" />
-    <Compile Include="Requests\GetSkuDetails.cs" />
-    <Compile Include="Requests\Request.cs" />
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\Base64DecoderException.cs" />
-    <Compile Include="Utils\Consts.cs" />
-    <Compile Include="Utils\Security.cs" />
-    <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InAppServiceBinding\InAppServiceBinding.csproj">
-      <Project>{588523ac-e491-4c9b-8413-81c42f40d8b7}</Project>
-      <Name>InAppServiceBinding</Name>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\play.billing.v3\play.billing.v3.csproj">
+      <Project>{573869d7-ef04-48ab-abed-fe8378dc1a12}</Project>
+      <Name>play.billing.v3</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Billing\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
+     Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">

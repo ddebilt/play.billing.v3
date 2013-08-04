@@ -9,8 +9,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.Text;
+using play.billing.v3;
 
-namespace play.billing.v3
+namespace PlayBillingSample
 {
 	[Activity(Label = "play.billing.v3", MainLauncher = true, Icon = "@drawable/icon")]
 	public class Activity1 : Activity, IPlayListener
