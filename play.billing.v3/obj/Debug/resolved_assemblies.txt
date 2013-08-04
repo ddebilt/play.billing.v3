@@ -1,2 +1,0 @@
-C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\play.billing.v3.dll
-C:\Users\Dan\Documents\GitHub\play.billing.v3\play.billing.v3\bin\Debug\InAppServiceBinding.dll
