@@ -84,6 +84,10 @@
     </TransformFile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InAppServiceBinding\InAppServiceBinding.csproj">
+      <Project>{588523ac-e491-4c9b-8413-81c42f40d8b7}</Project>
+      <Name>InAppServiceBinding</Name>
+    </ProjectReference>
     <ProjectReference Include="..\play.billing.v3\play.billing.v3.csproj">
       <Project>{573869d7-ef04-48ab-abed-fe8378dc1a12}</Project>
       <Name>play.billing.v3</Name>
