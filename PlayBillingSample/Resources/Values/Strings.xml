@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="Purchase">Buy: item_2"</string>
+		
+	<string name="Cancel">Test Cancel: (android.test.canceled)</string>	
+	<string name="Unavailable">Test Unavailable: (android.test.unavailable)</string>
+	
+	<string name="Consume">Consume: item_2</string>	
+	<string name="Sku">Get Sku Detail: item_2</string>
+	
+	<string name="Purchases">Query Purchases</string>
+	
+	<string name="ApplicationName">play.billing.v3</string>
+</resources>

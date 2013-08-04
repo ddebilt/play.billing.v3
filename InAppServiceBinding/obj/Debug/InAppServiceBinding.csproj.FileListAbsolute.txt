@@ -1,4 +1,0 @@
-C:\Users\Dan\Documents\GitHub\play.billing.v3\InAppServiceBinding\bin\Debug\InAppServiceBinding.dll
-C:\Users\Dan\Documents\GitHub\play.billing.v3\InAppServiceBinding\bin\Debug\InAppServiceBinding.pdb
-C:\Users\Dan\Documents\GitHub\play.billing.v3\InAppServiceBinding\obj\Debug\InAppServiceBinding.dll
-C:\Users\Dan\Documents\GitHub\play.billing.v3\InAppServiceBinding\obj\Debug\InAppServiceBinding.pdb
