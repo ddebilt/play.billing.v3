@@ -99,7 +99,7 @@ namespace play.billing.v3
 			{
 				Connected = true;
 
-				InAppService = InAppBillingServiceStub.AsInterface(service);
+				InAppService = IInAppBillingServiceStub.AsInterface(service);
 				var packageName = MainContext.PackageName;
 
 				Utils.LogDebug("InAppService connected. Checking for v3 support.");
