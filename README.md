@@ -3,7 +3,7 @@ play.billing.v3
 
 A C# Google Play client, for use with Xamarin.Android applications.
 
-To use, refer to how the the BillingService implementation is used within the Activity1.cs file. There is an example for "Buy", "GetSkuDetails" (items that can be bought), "GetPurchases" (items that have been bought), and "Consume" (consuming a purchase, allowing re-purchase).
+To use, refer to how the BillingService implementation is used within the Activity1.cs file. There is an example for "Buy", "GetSkuDetails" (items that can be bought), "GetPurchases" (items that have been bought), and "Consume" (consuming a purchase, allowing re-purchase).
 
 
 Security
